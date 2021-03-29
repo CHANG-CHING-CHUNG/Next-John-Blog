@@ -12,7 +12,7 @@ export default function Layout({ children, home }) {
           />
       </Head>
       <Header/>
-      <main>
+      <main className="min-h-screen">
         <div className="container p-10 flex flex-col justify-center items-center ">
           <SideBar/>
           {
