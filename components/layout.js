@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from './header';
+import SideBar from './sidebar';
 
 export default function Layout({ children, home }) {
   return (
@@ -12,9 +13,12 @@ export default function Layout({ children, home }) {
       </Head>
       <Header/>
       <main>
-        {
-          children
-        }
+        <div className="container p-10 flex flex-col justify-center items-center ">
+          <SideBar/>
+          {
+            children
+          }
+        </div>
       </main>
     </div>
   )
