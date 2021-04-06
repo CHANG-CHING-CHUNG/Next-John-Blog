@@ -19,19 +19,17 @@ export default function NavList() {
   },[open])
 
   return (
-      <nav className="hidden sm:flex space-x-5 h-12 ml-12 text-lg items-center text-white">
-        <div >
+      <nav className="md:ml-5 sm:flex md:flex-row sm:flex-1 flex-col md:space-x-5 min-h-0 text-lg items-center text-white">
           <div className="h-12"><a className="hover:text-gray-300 h-full flex flex-col justify-center items-center" href="#">首頁</a></div>
           <div className="h-12"><a className="hover:text-gray-300 flex h-full  flex-col justify-center items-center" href="#">關於我</a></div>
-          <div ref={dropdownDiv} className="relative group h-12">
+          <div ref={dropdownDiv} className="relative group h-12 flex justify-center">
             <button onClick={handleBtnClick} className="hover:text-gray-300 h-12">
               程式基礎教學
             </button>
             {
               open &&
               <>
-                <hr className="absolute h-1 bg-white w-full"></hr>
-                <ul className="shadow-lg mt-1 divide-y-2 absolute bg-white text-black w-auto px-6">
+                <ul className="shadow-lg top-12 divide-y-2 absolute bg-white text-black w-auto px-6">
                   <li><a className="block py-4" href="#">JavaScript</a></li>
                   <li><a className="block py-4" href="#">HTML</a></li>
                   <li><a className="block py-4" href="#">CSS</a></li>
@@ -41,8 +39,6 @@ export default function NavList() {
             
           </div>
           <div className="h-12"><a className="hover:text-gray-300 flex h-full  flex-col justify-center items-center" href="#">隨手札記</a></div>
-        </div>
-        
         
       </nav>
   )
